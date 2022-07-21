@@ -1,0 +1,105 @@
+import requests,json,os,pyautogui,cv2,time,webbrowser,socket,random
+from playsound import playsound
+os.system("cls")
+host_name=socket.gethostname()
+ip=str(socket.gethostbyname(host_name)).replace('.','')
+ip=ip*5
+rsp=str(requests.get('https://pastebin.com/raw/jFWVSm6p',timeout=1).text)
+if rsp.find(ip) ==-1:
+    print ('SEVER CONNECT == MAX REACH')
+    print (f'PRESS THIS KEY TO ADMIN TO JOIN : {ip}')
+    print ('''=========SUPORORT=LINK=========
+Facebook: https://facebook.com/Alobyerel
+YOUTUBE: https://www.youtube.com/channel/UCLYHg8iWxB_U1juOyirgFkw''')
+    time.sleep(100)
+    exit()
+else:
+    random=random.randint(50,100)
+    print (f'KẾT NỐI THÀNH CÔNG SEVER <==> HIỆN CÓ {random} USER ĐANG ONLINE')
+    os.system("pip install playsound==1.2.2")
+    os.system("pip install cv2")
+os.system("cls")
+job_wait=int(input('NGHỈ SAU BAO NHIÊU JOB : '))
+time_sleep=int(input('THỜI GIAN NGHỈ : '))
+id_tiktok=('6971948023715234817')
+access_token2=input('')
+access_token1=input('')
+button=cv2.imread('image/like_button.png',0)
+akip=json.loads(rsp)['cache']
+weith=button.shape[1]
+high=button.shape[0]
+def runtext(access_token):
+    playsound('image\\iku.mp3')
+    for i in range (akip):
+        rsp=requests.get(f'https://traodoisub.com/api/?fields=tiktok_like&access_token={access_token}').text
+        if rsp.find('error')== 7:
+            time.sleep(1)
+            None
+        elif json.loads(rsp)['data'] == '[]':
+            time.sleep(2)
+            None
+        else:
+            break
+    rsp=json.loads(rsp)
+    cache=rsp['cache']
+    data=rsp['data'][0]
+    id_job=data['id']
+    link=data['link']
+    webbrowser.open_new_tab(link)
+    time.sleep(10)
+    while True:
+        pyautogui.screenshot('image/Screen.png')
+        screen=cv2.imread('image/Screen.png',0)
+        res = cv2.matchTemplate(screen,button,cv2.TM_CCOEFF_NORMED)
+        min_vl,max_vl,min_c,max_c=cv2.minMaxLoc(res)
+        if max_vl>=0.9:
+            pyautogui.FAILSAFE = False
+            for i in range(2):
+                squar=max_c[0]+weith-10,max_c[1]+high+6
+                pyautogui.click(squar)
+                if i==1:
+                    time.sleep(8)
+                else:
+                    time.sleep(10)
+            pyautogui.hotkey('ctrl', 'w')
+            break  
+        else:
+            pyautogui.hotkey('ctrl', 'w')
+            break
+    for i in range(3):
+        rsp=requests.get(f'https://traodoisub.com/api/coin/?type=TIKTOK_LIKE_CACHE&id={id_job}&access_token={access_token}').text
+        rsp=json.loads(rsp)
+        real_cache=rsp['cache']
+        if real_cache == cache+1:
+            if real_cache >= 8:
+                time.sleep(5)
+                rsp=requests.get(f'https://traodoisub.com/api/coin/?type=TIKTOK_LIKE&id=TIKTOK_LIKE_API&access_token={access_token}').text
+                if rsp.find('error') ==7:
+                    print ('LỖI NHẬN XU !! XEM LẠI CẤU HÌNH')
+                else:
+                    rsp=json.loads(rsp)
+                    rsp=rsp['data']
+                    print ('\033[1;31mNHẬN THÀNH CÔNG ==> NHẬN ĐƯỢC',rsp['msg'],'TỔNG TIỀN HIỆN TẠI :',rsp['xu'])
+            print ('Đã duyệt thành công JOB')
+            break
+        else:
+            print ('Đang chờ duyệt JOB')
+            if i==3:
+                print ('LỖI NHẬN JOB < XEM LẠI BLOCK > ')
+                break
+    return (real_cache);
+def viptool():
+    while True:
+        for i in range(job_wait):
+            if i % 2:
+                access_token=access_token1
+            else:
+                access_token=access_token2
+            rsp=requests.get(f'https://traodoisub.com/api/?fields=tiktok_run&id={id_tiktok}&access_token={access_token}').text
+            text=json.loads(rsp)['data']['msg']
+            print (text ,'==> ID :',id_tiktok)
+            number_of_job=runtext(access_token)
+            print ('\033[1;'+str(number_of_job+88)+'m','ĐÃ HOÀN THÀNH',number_of_job,'JOB')
+        os.system("cls")
+        time.sleep(time_sleep)
+viptool()
