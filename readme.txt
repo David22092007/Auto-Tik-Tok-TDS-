@@ -1,5 +1,5 @@
 id_group=339825519117801
 cookie=sb=ThtxZr9jtwKUOh2SqhAYwLjs; datr=ThtxZlu2AfqF_id8SQn4lt4n; c_user=100087988281253; ps_n=1; ps_l=1; m_page_voice=100087988281253; wd=1366x711; xs=36%3A0jyYjonXcAwVNQ%3A2%3A1718688687%3A-1%3A6278%3A%3AAcWrDImc-o5a1sORcXVJQMIk6nUiBL8IYqeIyhkLKS8; fr=1twzB987fNOQsdy6z.AWU5cEpV9rmuxSMkuP_LrnnsZEY.BmdZiT..AAA.0.0.BmdZiT.AWUjkw6si4U; presence=C%7B%22t3%22%3A%5B%7B%22o%22%3A0%2C%22i%22%3A%22sc.25743976535216607%22%7D%5D%2C%22utc3%22%3A1718982943684%2C%22v%22%3A1%7D
-time_repeat=200
+time_repeat=50
 times=10
 count=0
