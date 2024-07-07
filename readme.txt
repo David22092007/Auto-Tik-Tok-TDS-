@@ -1,5 +1,5 @@
 id_group=339825519117801
-cookie=sb=ThtxZr9jtwKUOh2SqhAYwLjs; datr=ThtxZlu2AfqF_id8SQn4lt4n; ps_n=1; ps_l=1; dpr=1.100000023841858; c_user=100087988281253; xs=32%3AIzkXHlIj59n5uw%3A2%3A1719758907%3A-1%3A6278%3A%3AAcXtleB5S30WUGw0GV3-DipQ3TUBlco8aH98RCvWFw; fr=1dJHaat3ZfhMkZJNR.AWX1kC69SKZFMpT0xqa7gI04aCs.Bmggcz..AAA.0.0.BmghTV.AWXAhcEPH6o; presence=C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1719801064033%2C%22v%22%3A1%7D; wd=832x654
+cookie=sb=ThtxZr9jtwKUOh2SqhAYwLjs; datr=ThtxZlu2AfqF_id8SQn4lt4n; ps_n=1; ps_l=1; wd=1366x712; c_user=100087988281253; xs=32%3AzdMrannoE6Gy4w%3A2%3A1720318265%3A-1%3A6278; fr=1Ivr8AcdKlmo2p0Tc.AWXKnhLoGRwo4eCfMZrPPIY3d6M.Bmie5f..AAA.0.0.Bmifk7.AWUiUsPyyCE
 time_repeat=300
 times=200
 count=0
