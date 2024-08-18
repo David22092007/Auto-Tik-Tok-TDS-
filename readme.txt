@@ -3,3 +3,4 @@ cookie=
 time_repeat=300
 times=200
 count=0
+secret=beheolinh2k7
